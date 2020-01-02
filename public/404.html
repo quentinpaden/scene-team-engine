@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+    manifest.json provides metadata used when your web app is added to the
+    homescreen<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
+ on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+  -->
+    <meta name="msapplication-TileColor" content="#000" />
+
+    <meta name="theme-color" content="#fff" />
+
+    <script src="https://firebasestorage.googleapis.com/v0/b/timbre-d11e2.appspot.com/o/0_Packages%2Fpace.min%20(1).js?alt=media&token=3f21b992-122e-4094-8207-4c6e68b9f943"></script>
+    <link
+      href="https://firebasestorage.googleapis.com/v0/b/timbre-d11e2.appspot.com/o/0_Packages%2Fpace%20(1).css?alt=media&token=0bf428da-3a66-4b54-a0a2-6e4f30aac514"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="%PUBLIC_URL%/player.css" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      rel="shortcut icon"
+      href="https://firebasestorage.googleapis.com/v0/b/timbre-d11e2.appspot.com/o/Icons%2Fframe-1%20(2).ico?alt=media&token=e64dfd7b-e4d4-4b25-850a-ce63c5af1f6c"
+    />
+    <!--
+    Notice the use of %PUBLIC_URL% in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+    <title>Game - Scene</title>
+  </head>
+
+  <body style="background-color: #333333">
+    <div id="root"></div>
+    <div id="myDiv"></div>
+
+    <!-- Polyfills -->
+    <script
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Rangetouch to fix <input type="range"> on touch devices (see https://rangetouch.com) -->
+    <script
+      src="https://cdn.rangetouch.com/1.0.5/rangetouch.js"
+      async=""
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="jquery.min.js"></script>
+    <script src="rangeslider.min.js"></script>
+    <script>
+      // Initialize a new plugin instance for all
+      // e.g. $('input[type="range"]') elements.
+      $('input[type="range"]').rangeslider();
+      // Destroy all plugin instances created from the
+      // e.g. $('input[type="range"]') elements.
+      $('input[type="range"]').rangeslider("destroy");
+      // Update all rangeslider instances for all
+      // e.g. $('input[type="range"]') elements.
+      // Usefull if you changed some attributes e.g. `min` or `max` etc.
+      $('input[type="range"]').rangeslider("update", true);
+    </script>
+  </body>
+</html>
